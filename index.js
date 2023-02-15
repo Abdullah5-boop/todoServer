@@ -13,7 +13,7 @@ const uri = `mongodb+srv://todolist:N1hff3d0A0Szo9Fz@cluster0.q4ve3.mongodb.net/
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 async function run() {
   try {
-    await client.connect();
+    client.connect();
 
     const todolist = client.db('Tododatabase').collection('Todolist')
     app.get('/watchtodo', async (req, res) => {
