@@ -29,6 +29,7 @@ async function run() {
       const result = await todolist.insertOne(data)
       console.log(result)
     })
+    
     app.put('/updateColor', async (req, res) => {
       let colors = req.body;
       console.log(colors.color)
